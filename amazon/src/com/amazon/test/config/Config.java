@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Config {
 
-	private static String baseURL = "https://google.com.mx";//comentario
+	private static String baseURL = "https://amazon.com.mx";
 	private static WebDriver driver;
 	
 	
