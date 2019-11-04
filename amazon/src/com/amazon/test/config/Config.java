@@ -20,6 +20,4 @@ public class Config {
 	public void close() {
 		driver.close();
 	}
-	
-	
 }
