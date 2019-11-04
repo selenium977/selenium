@@ -20,7 +20,7 @@ public class SideBarMenu {
 	private static final By Menu				=By.xpath("//a[@id='nav-hamburger-menu']");
 	
 	//COMPRAR POR CATEGORIA 
-	/*private static final By AmazonPrimeVide    	=By.xpath("//a[@id='nav-hamburger-menu']");
+	/*private static final By AmazonPrimeVideo  =By.xpath("//a[@id='nav-hamburger-menu']");
 	private static final By EchoYAlexa    		=By.xpath("//a[@id='nav-hamburger-menu']");
 	private static final By AmazonMusic 		=By.xpath("//a[@id='nav-hamburger-menu']");
 	private static final By AmazonFireTV   		=By.xpath("//a[@id='nav-hamburger-menu']");
