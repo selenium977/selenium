@@ -84,14 +84,56 @@ public class SideBarMenu {
 	
 	//EreadersEbook Kindle
 		//Ereaders
+	private static final By Kindle				=By.xpath("//*[@id=\"hmenu-content\"]/ul[5]/li[3]/a");
+	private static final By PaperWhite			=By.xpath("//*[@id=\"hmenu-content\"]/ul[5]/li[4]/a");
+	private static final By Oasis 				=By.xpath("//*[@id=\"hmenu-content\"]/ul[5]/li[5]/a");
+	private static final By Accesorios 			=By.xpath("//*[@id=\"hmenu-content\"]/ul[5]/li[6]/a");
 		//Tienda Kindle 
+	private static final By EbooKindle			=By.xpath("//*[@id=\"hmenu-content\"]/ul[5]/li[9]/a");
+	private static final By Ulimited			=By.xpath("//*[@id=\"hmenu-content\"]/ul[5]/li[10]/a");
+	private static final By Flash 				=By.xpath("//*[@id=\"hmenu-content\"]/ul[5]/li[11]/a");
 		//Apps y Recursos 
+	private static final By LecturaFree			=By.xpath("//*[@id=\"hmenu-content\"]/ul[5]/li[14]/a");
+	private static final By CloudReader			=By.xpath("//*[@id=\"hmenu-content\"]/ul[5]/li[15]/a");
+	private static final By DispoContenido		=By.xpath("//*[@id=\"hmenu-content\"]/ul[5]/li[16]/a");
+	private static final By Todotienda			=By.xpath("//*[@id=\"hmenu-content\"]/ul[5]/li[17]/a");
+
 	//AlimentosBebidas
+	private static final By Alimentos			=By.xpath("//*[@id=\"hmenu-content\"]/ul[6]/li[3]/a");
+	private static final By VinosLicores		=By.xpath("//*[@id=\"hmenu-content\"]/ul[6]/li[4]/a");
+	
 	//Libros
+	private static final By Ingles				=By.xpath("//*[@id=\"hmenu-content\"]/ul[7]/li[3]/a");
+	private static final By InfantilJuvenil		=By.xpath("//*[@id=\"hmenu-content\"]/ul[7]/li[4]/a");
+	private static final By Literaturaficcion	=By.xpath("//*[@id=\"hmenu-content\"]/ul[7]/li[5]/a");
+	private static final By LibrosTexto			=By.xpath("//*[@id=\"hmenu-content\"]/ul[7]/li[6]/a");
+	private static final By ProfesionalTec		=By.xpath("//*[@id=\"hmenu-content\"]/ul[7]/li[7]/a");
+	private static final By Fantasia			=By.xpath("//*[@id=\"hmenu-content\"]/ul[7]/li[8]/a");
+	private static final By Romance				=By.xpath("//*[@id=\"hmenu-content\"]/ul[7]/li[9]/a");
+	private static final By EKinlde				=By.xpath("//*[@id=\"hmenu-content\"]/ul[7]/li[10]/a");
+	private static final By TodoLibros			=By.xpath("//*[@id=\"hmenu-content\"]/ul[7]/li[11]/a");
+	
 	//PelisSeriesTVMusic
 		//Peliculas y Series
+	private static final By Peliculas			=By.xpath("//*[@id=\"hmenu-content\"]/ul[8]/li[3]/a");
+	private static final By SeriesTV			=By.xpath("//*[@id=\"hmenu-content\"]/ul[8]/li[4]/a");
+	private static final By TodoPelSeri			=By.xpath("//*[@id=\"hmenu-content\"]/ul[8]/li[5]/a");
 		//Musica
+	private static final By CDVinilos			=By.xpath("//*[@id=\"hmenu-content\"]/ul[8]/li[8]/a");
+	private static final By PMusic				=By.xpath("//*[@id=\"hmenu-content\"]/ul[8]/li[9]/a");
+	private static final By MusicUnlimited		=By.xpath("//*[@id=\"hmenu-content\"]/ul[8]/li[10]/a");
+
 	//Electronicos
+	private static final By TVVideo				=By.xpath("//*[@id=\"hmenu-content\"]/ul[9]/li[3]/a");
+	private static final By AudioSonido			=By.xpath("//*[@id=\"hmenu-content\"]/ul[9]/li[4]/a");
+	private static final By Celulares			=By.xpath("//*[@id=\"hmenu-content\"]/ul[9]/li[5]/a");
+	private static final By CamaraFotos			=By.xpath("//*[@id=\"hmenu-content\"]/ul[9]/li[6]/a");
+	private static final By OficinaPapeleria	=By.xpath("//*[@id=\"hmenu-content\"]/ul[9]/li[7]/a");
+	private static final By InstrumentMusical	=By.xpath("//*[@id=\"hmenu-content\"]/ul[9]/li[8]/a");
+	private static final By NavegacionGPS		=By.xpath("//*[@id=\"hmenu-content\"]/ul[9]/li[9]/a");
+	private static final By AccesoriosEln		=By.xpath("//*[@id=\"hmenu-content\"]/ul[9]/li[10]/a");
+	private static final By TodoLEln			=By.xpath("//*[@id=\"hmenu-content\"]/ul[9]/li[11]/a");
+	
 	//ComputoTablets
 	//Software
 	//Videojuegos
