@@ -43,9 +43,19 @@ public class SideBarMenu {
 	private static final By DeportesAireLibre	=By.xpath("//a[@data-menu-id = '22']");
 	private static final By SaludCuidadoPerso	=By.xpath("//a[@data-menu-id = '23']");
 	private static final By IndustEmpreCiencia	=By.xpath("//a[@data-menu-id = '24']");
-	//private static final By TodasCategorias		=By.xpath("//a[@data-menu-id = '23']");
+	private static final By TodasCategorias		=By.xpath("//*[@id=\"hmenu-content\"]/ul[24]/li[25]/a");
 	
 	//AmazonPrimeVideo 
+	private static final By TodoslosVideos		=By.xpath("//*[@id='hmenu-content']/ul[1]/li[3]/a");
+	private static final By PrimeChannels		=By.xpath("//*[@id='hmenu-content']/ul[1]/li[4]/a");
+	private static final By VerCualquierLug		=By.xpath("//*[@id=\"hmenu-content\"]/ul[1]/li[5]/a");
+		//Amazon Original 
+	private static final By DeViajeDerbez		=By.xpath("//*[@id='hmenu-content']/ul[1]/li[8]/a");
+	private static final By TomClancysRyan		=By.xpath("//*[@id=\"hmenu-content\"]/ul[1]/li[9]/a");
+	private static final By EljuegoLlaves		=By.xpath("//*[@id=\"hmenu-content\"]/ul[1]/li[10]/a");
+	private static final By ModernLove			=By.xpath("//*[@id=\"hmenu-content\"]/ul[1]/li[11]/a");
+	private static final By LOL					=By.xpath("//*[@id=\"hmenu-content\"]/ul[1]/li[12]/a");
+
 	//EchoYAlexa
 	//AmazonMusic
 	//AmazonFireTV
