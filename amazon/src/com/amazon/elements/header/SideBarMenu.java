@@ -1,4 +1,4 @@
-package com.amazon.header.elements;
+package com.amazon.elements.header;
 
 import java.awt.Dimension;
 import java.io.File;
