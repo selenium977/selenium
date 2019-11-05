@@ -57,4 +57,9 @@ public class Config {
 		}
 	}
 	
+	public static void sendKeys(By identifier, String keys) {
+		driver.findElement(identifier).sendKeys(keys);
+	}
+	
+	
 }
