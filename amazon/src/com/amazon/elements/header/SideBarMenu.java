@@ -57,7 +57,20 @@ public class SideBarMenu {
 	private static final By LOL					=By.xpath("//*[@id=\"hmenu-content\"]/ul[1]/li[12]/a");
 
 	//EchoYAlexa
-	//AmazonMusic
+	private static final By Echo 				=By.xpath("//*[@id=\"hmenu-content\"]/ul[2]/li[3]/a");
+	private static final By Echoplus			=By.xpath("//*[@id=\"hmenu-content\"]/ul[2]/li[4]/a");
+	private static final By EchoDot				=By.xpath("//*[@id=\"hmenu-content\"]/ul[2]/li[5]/a");
+	private static final By EchoSpot			=By.xpath("//*[@id=\"hmenu-content\"]/ul[2]/li[6]/a");
+		//Casa inteligente de alexa
+	private static final By SmartPlug			=By.xpath("//*[@id=\"hmenu-content\"]/ul[2]/li[9]/a");
+	private static final By CasaSmart			=By.xpath("//*[@id=\"hmenu-content\"]/ul[2]/li[10]/a");
+		//Contenido y recursos
+	private static final By AppAlexa			=By.xpath("//*[@id=\"hmenu-content\"]/ul[2]/li[13]/a");
+	private static final By TodasSkills			=By.xpath("//*[@id=\"hmenu-content\"]/ul[2]/li[14]/a");
+	private static final By Musica				=By.xpath("//*[@id=\"hmenu-content\"]/ul[2]/li[15]/a");
+	
+	//AmazonMusics
+	
 	//AmazonFireTV
 	//EreadersEbook Kindle
 	//AlimentosBebidas
@@ -79,8 +92,8 @@ public class SideBarMenu {
 	//TodasCategorias
 	
 	//***AYUDA Y CONFIGURACIÓN*** 
-	/*private static final By MiCuenta			=By.xpath("//a[@id='nav-hamburger-menu']");
-	private static final By Ayuda				=By.xpath("//a[@id='nav-hamburger-menu']");
-	private static final By Identificarse		=By.xpath("//a[@id='nav-hamburger-menu']");*/
+	private static final By MiCuenta			=By.xpath("//*[@id=\"hmenu-content\"]/ul[24]/li[28]/a");
+	private static final By Ayuda				=By.xpath("//*[@id=\"hmenu-content\"]/ul[24]/li[29]/a");
+	private static final By Identificarse		=By.xpath("//*[@id=\"hmenu-content\"]/ul[24]/li[30]/a");
 	
 }
