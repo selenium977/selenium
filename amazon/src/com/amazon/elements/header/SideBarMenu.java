@@ -70,12 +70,27 @@ public class SideBarMenu {
 	private static final By Musica				=By.xpath("//*[@id=\"hmenu-content\"]/ul[2]/li[15]/a");
 	
 	//AmazonMusics
+		//Musica en Streaming
+	private static final By PrimeMusic			=By.xpath("//*[@id=\"hmenu-content\"]/ul[3]/li[3]/a");
+	private static final By UnlimitedMusic		=By.xpath("//*[@id=\"hmenu-content\"]/ul[3]/li[4]/a");
+	private static final By ReproductorWeb		=By.xpath("//*[@id=\"hmenu-content\"]/ul[3]/li[5]/a");
+	private static final By MusicApp			=By.xpath("//*[@id=\"hmenu-content\"]/ul[3]/li[6]/a");
+		//Comprar Musica
+	private static final By CDsVinilos			=By.xpath("//*[@id=\"hmenu-content\"]/ul[3]/li[9]/a");
 	
 	//AmazonFireTV
+	private static final By TVStickBasic		=By.xpath("//*[@id=\"hmenu-content\"]/ul[4]/li[3]/a");
+	private static final By APrimeVideo			=By.xpath("//*[@id=\"hmenu-content\"]/ul[4]/li[4]/a");
+	
 	//EreadersEbook Kindle
+		//Ereaders
+		//Tienda Kindle 
+		//Apps y Recursos 
 	//AlimentosBebidas
 	//Libros
 	//PelisSeriesTVMusic
+		//Peliculas y Series
+		//Musica
 	//Electronicos
 	//ComputoTablets
 	//Software
