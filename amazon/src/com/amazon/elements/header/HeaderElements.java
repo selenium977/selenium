@@ -11,53 +11,135 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HeaderElements {
+	
+	
+	@FindBy(xpath="//a[@aria-label='Amazon.com.mx']")
+	private WebElement AmazonLogo;
+	
+	@FindBy(xpath="//a[@id='nav-hamburger-menu']")
+	private WebElement Menu;
+	
+	@FindBy(xpath="//select[@aria-describedby='searchDropdownDescription']")
+	private WebElement AllDepartments;
+	
+	@FindBy(xpath="//input[@id='twotabsearchtextbox']")
+	private WebElement SearchBar;		
+	
+	@FindBy(xpath="//input[@value='Ir']")
+	private WebElement SearchButton;			
+	
+	@FindBy(xpath="//a[@data-nav-ref='nav_ya_signin']")
+	private WebElement SignInYourAccount;		
+	
+	@FindBy(xpath="//a[@id='nav-link-prime']")
+	private WebElement AmazonPrime;				
+	
+	@FindBy(xpath="//a[@id='nav-cart']")
+	private WebElement GoToCart;					
+	
+	@FindBy(xpath="//a[@tabindex='35']")
+	private WebElement ChooseAddress;			
+	
+	@FindBy(xpath="//a[@tabindex='47']")
+	private WebElement Promotions;				
+	
+	@FindBy(xpath="//a[@tabindex='48']")
+	private WebElement Outlet;					
+	
+	@FindBy(xpath="//a[@tabindex='49']")
+	private WebElement AmazonBasics;			
+	
+	@FindBy(xpath="//a[@tabindex='50']")
+	private WebElement BestSellers;				
+	
+	@FindBy(xpath="//a[@tabindex='51']")
+	private WebElement BestGifts;				
+	
+	@FindBy(xpath="//a[@tabindex='52']")
+	private WebElement News;                 	
+	
+	@FindBy(xpath="//div[@id='nav-swmslot']")
+	private WebElement TopDynamicSlogan;			
+	
+	@FindBy(xpath="(//span[text()='Identificarse'])[0]")
+	private WebElement IdentifyYourself;			
+	
+	@FindBy(xpath="(//a[@class='nav-a'])[0]")
+	private WebElement StartHere;				
+	
+	@FindBy(xpath="//div[text()='Listas']")
+	private WebElement Lists;					
+	
+	@FindBy(xpath="//span[text()='Crear una Wish List']")
+	private WebElement CreateWishList;			
+	
+	@FindBy(xpath="//span[text()='Crear una Mesa de Regalos de Bebé']")
+	private WebElement CreateBabyGiftTable;		
+	
+	@FindBy(xpath="//span[text()='Crear una Mesa de Regalos de Boda']")
+	private WebElement CreateWeddingGiftTable;	
+	
+	@FindBy(xpath="//div[text()='Mi cuenta']")
+	private WebElement MyAccountTop;				
+	
+	@FindBy(xpath="//span[text()='Mi cuenta']")
+	private WebElement MyAccount;				
+	
+	@FindBy(xpath="//span[text()='Mis pedidos']")
+	private WebElement MyOrders;					
+	
+	@FindBy(xpath="//span[text()='Mis recomendaciones']")
+	private WebElement MyRecommendations;
+	
+	@FindBy(xpath="//span[text()='Mi membresía Prime']")
+	private WebElement MyPrimeMembership;		
+	
+	@FindBy(xpath="//span[text()='Mi Planea y Ahorra']")
+	private WebElement MyPlanAndSave;			
+	
+	@FindBy(xpath="//span[text()='Membresías y suscripciones']")
+	private WebElement MembershipsAndSubs;		
+	
+	@FindBy(xpath="//span[text()='Mis mascotas']")
+	private WebElement MyPets;					
+	
+	@FindBy(xpath="//span[text()='Mi contenido Kindle']")
+	private WebElement KindleContent;			
+	
+	@FindBy(xpath="//span[text()='Mi Amazon Music']")
+	private WebElement AmazonMusic;				
+	
+	@FindBy(xpath="//span[text()='Mi Prime Video']")
+	private WebElement PrimeVideo;					
 
-	public static final By LogoAmazon				=By.xpath("//a[@aria-label='Amazon.com.mx']");
-	public static final By Menu						=By.xpath("//a[@id='nav-hamburger-menu']");
-	public static final By AllDepartments			=By.xpath("//select[@aria-describedby='searchDropdownDescription']");
-	public static final By SearchBar				=By.xpath("//input[@id='twotabsearchtextbox']");
-	public static final By SearchButton				=By.xpath("//input[@value='Ir']");
-	public static final By SignInYourAccount		=By.xpath("//a[@data-nav-ref='nav_ya_signin']");
-	public static final By AmazonPrime				=By.xpath("//a[@id='nav-link-prime']");
-	public static final By GoToCart					=By.xpath("//a[@id='nav-cart']");
-	public static final By ChooseAddress			=By.xpath("//a[@tabindex='35']");
-	public static final By Promotions				=By.xpath("//a[@tabindex='47']");
-	public static final By Outlet					=By.xpath("//a[@tabindex='48']");
-	public static final By AmazonBasics				=By.xpath("//a[@tabindex='49']");
-	public static final By BestSellers				=By.xpath("//a[@tabindex='50']");
-	public static final By BestGifts				=By.xpath("//a[@tabindex='51']");
-	public static final By News                 	=By.xpath("//a[@tabindex='52']");
-	public static final By TopDynamicSlogan			=By.xpath("//div[@id='nav-swmslot']");
+	@FindBy(xpath="//a[text()='Envíos ilimitados']")
+	private WebElement UnlimitedDelivery;		
 	
-	public static final By IdentifyYourself			=By.xpath("(//span[text()='Identificarse'])[0]");
-	public static final By StartHere				=By.xpath("(//a[@class='nav-a'])[0]");
+	@FindBy(xpath="//a[text()='Envíos sin mínimo de compra ']")
+	private WebElement NoMinimunPurchase;		
 	
-	public static final By Lists					=By.xpath("//div[text()='Listas']");
-	public static final By CreateWishList			=By.xpath("//span[text()='Crear una Wish List']");
-	public static final By CreateBabyGiftTable		=By.xpath("//span[text()='Crear una Mesa de Regalos de Bebé']");
-	public static final By CreateWeddingGiftTable	=By.xpath("//span[text()='Crear una Mesa de Regalos de Boda']");
+	@FindBy(xpath="//a[text()='Prime Video']")
+	private WebElement PrimeVideoBottom;			
 	
-	public static final By MyAccountTop				=By.xpath("//div[text()='Mi cuenta']");
-	public static final By MyAccount				=By.xpath("//span[text()='Mi cuenta']");
-	public static final By MyOrders					=By.xpath("//span[text()='Mis pedidos']");
-	public static final By MyRecommendations		=By.xpath("//span[text()='Mis recomendaciones']");
-	public static final By MyPrimeMembership		=By.xpath("//span[text()='Mi membresía Prime']");
-	public static final By MyPlanAndSave			=By.xpath("//span[text()='Mi Planea y Ahorra']");
-	public static final By MembershipsAndSubs		=By.xpath("//span[text()='Membresías y suscripciones']");
-	public static final By MyPets					=By.xpath("//span[text()='Mis mascotas']");
-	public static final By KindleContent			=By.xpath("//span[text()='Mi contenido Kindle']");
-	public static final By AmazonMusic				=By.xpath("//span[text()='Mi Amazon Music']");
-	public static final By PrimeVideo				=By.xpath("//span[text()='Mi Prime Video']");	
+	@FindBy(xpath="(//input[@type='submit'])[1]")
+	private WebElement TryAmazonPrime;			
+	
+	@FindBy(xpath="//div[@class='nav-npm-prime-logo']")
+	private WebElement AmazonPrimelogo;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
-	
-	public static final By UnlimitedDelivery		=By.xpath("//a[text()='Envíos ilimitados']");
-	public static final By NoMinimunPurchase		=By.xpath("//a[text()='Envíos sin mínimo de compra ']");
-	public static final By PrimeVideoBottom			=By.xpath("//a[text()='Prime Video']");
-	
-	public static final By TryAmazonPrime			=By.xpath("(//input[@type='submit'])[1]");
-	public static final By AmazonPrimelogo			=By.xpath("//div[@class='nav-npm-prime-logo']");
 }
