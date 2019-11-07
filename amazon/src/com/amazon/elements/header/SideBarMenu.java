@@ -35,6 +35,8 @@ public class SideBarMenu {
 	private List<WebElement> subCategorias;
 	
 	
+	//categoria.get(5).click();
+	
 	public SideBarMenu ()
 	{
 	}
