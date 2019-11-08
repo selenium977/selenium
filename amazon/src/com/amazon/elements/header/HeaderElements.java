@@ -1,19 +1,8 @@
 package com.amazon.elements.header;
 
-import java.awt.Dimension;
-import java.io.File;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.time.Duration;
-import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HeaderElements {
 	
@@ -21,8 +10,8 @@ public class HeaderElements {
 	@FindBy(xpath="//a[@aria-label='Amazon.com.mx']")
 	private WebElement AmazonLogo;
 	
-	@FindBy(xpath="//a[@id='nav-hamburger-menu']")
-	private WebElement Menu;
+	@FindBy(xpath="//i[@class='hm-icon nav-sprite']")
+	public WebElement Menu;
 	
 	@FindBy(xpath="//select[@aria-describedby='searchDropdownDescription']")
 	private WebElement AllDepartments;

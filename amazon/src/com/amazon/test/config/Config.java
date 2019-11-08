@@ -14,25 +14,67 @@ public class Config {
 	private static WebDriver driver;
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	
-	public void setUp() {
+	public WebDriver setUp() {
 		
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\Driver\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get(baseURL);
+		
+		return driver;
 		
 		
+	}
+	
+	public void getDriver() {
+		setUp();
 	}
 	
 	public void close() {
 		driver.close();
 	}
 	
-	public void click(By identifier) {
+	public void openUrl() {
+		driver.get(baseURL);
+	}
+	
+	public boolean click(WebElement element) 
+	{
+		boolean isClicked = false;
 		
-		driver.findElement(identifier).click();
+		driver.findElement((By) element).click();
+		isClicked = true;
+		
+		return isClicked;
+		
 		
 	}
+	
+	public boolean clickTry(WebElement element)
+	{
+		boolean isSelected = false;
+		
+		int tryNumber = 5;
+		try 
+		{
+			while(!isSelected == true && !(tryNumber == 0))
+			{
+				isSelected = click(element);
+				tryNumber--;					
+				System.out.println(tryNumber);
+			}
+		
+		
+		
+		
+		return isSelected;
+		}
+		
+		catch(Exception e){}
+		return isSelected;
+		
+	}
+	
+	
 	
 	public void scrollToElement(By identifier) {
 		
