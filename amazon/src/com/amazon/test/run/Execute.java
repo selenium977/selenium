@@ -15,9 +15,9 @@ public class Execute {
 		conf.getDriver();
 		conf.openUrl();
 		conf.implicitWait(5);
-		conf.clickTry(element.Menu);
-		System.out.println("El Tellez se la come doblada");
-		conf.close();
+		System.out.println("Before clicking the element");
+		conf.daClick(element.getPromotions());
+		System.out.println("After clicking the element");
 		
 	}
 

@@ -1,8 +1,12 @@
 package com.amazon.elements.header;
 
 
+import java.sql.DriverAction;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import com.amazon.test.config.Config;
 
 public class HeaderElements {
 	
@@ -11,16 +15,16 @@ public class HeaderElements {
 	private WebElement AmazonLogo;
 	
 	@FindBy(xpath="//i[@class='hm-icon nav-sprite']")
-	public WebElement Menu;
+	private WebElement Menu;
 	
 	@FindBy(xpath="//select[@aria-describedby='searchDropdownDescription']")
 	private WebElement AllDepartments;
 	
 	@FindBy(xpath="//input[@id='twotabsearchtextbox']")
-	private WebElement SearchBar;		
+	private static WebElement SearchBar;		
 	
 	@FindBy(xpath="//input[@value='Ir']")
-	private WebElement SearchButton;			
+	private static WebElement SearchButton;			
 	
 	@FindBy(xpath="//a[@data-nav-ref='nav_ya_signin']")
 	private WebElement SignInYourAccount;		
@@ -35,7 +39,7 @@ public class HeaderElements {
 	private WebElement ChooseAddress;			
 	
 	@FindBy(xpath="//a[@tabindex='47']")
-	private WebElement Promotions;				
+	private static WebElement Promotions;				
 	
 	@FindBy(xpath="//a[@tabindex='48']")
 	private WebElement Outlet;					
@@ -121,14 +125,30 @@ public class HeaderElements {
 	@FindBy(xpath="//div[@class='nav-npm-prime-logo']")
 	private WebElement AmazonPrimelogo;
 	
+
+	public static void searchProduct (String product) {
+		Config.sendKeys(SearchBar, product);
+		Config.daClick(SearchButton);
+		
+	}
+
+
+	public WebElement getPromotions() {
+		return Promotions;
+	}
+
+
+	public void setPromotions(WebElement promotions) {
+		Promotions = promotions;
+	}
 	
+	/*public static Config conf = new Config();
 	
-	
-	
-	
-	
-	
-	
-	
+	public static void main (String []args) {
+		conf.getDriver();
+		conf.openUrl();
+		conf.getDriver();
+		Promotions.click();
+	}*/
 
 }

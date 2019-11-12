@@ -7,6 +7,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 public class Config {
 
@@ -37,7 +38,7 @@ public class Config {
 		driver.get(baseURL);
 	}
 	
-	public boolean click(WebElement element) 
+	public static boolean unClick(WebElement element) 
 	{
 		boolean isClicked = false;
 		
@@ -49,7 +50,7 @@ public class Config {
 		
 	}
 	
-	public boolean clickTry(WebElement element)
+	public static boolean clickTry(WebElement element)
 	{
 		boolean isSelected = false;
 		
@@ -58,7 +59,7 @@ public class Config {
 		{
 			while(!isSelected == true && !(tryNumber == 0))
 			{
-				isSelected = click(element);
+				isSelected = unClick(element);
 				tryNumber--;					
 				System.out.println(tryNumber);
 			}
@@ -73,8 +74,6 @@ public class Config {
 		return isSelected;
 		
 	}
-	
-	
 	
 	public void scrollToElement(By identifier) {
 		
@@ -99,9 +98,13 @@ public class Config {
 		}
 	}
 	
-	public static void sendKeys(By identifier, String keys) {
-		driver.findElement(identifier).sendKeys(keys);
-	}
 	
+	
+	public static void sendKeys(WebElement identifier, String keys) {
+		Actions actions=new Actions(driver);
+		actions.sendKeys(keys)
+		.build()
+		.perform();
+	}
 	
 }
