@@ -7,6 +7,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 public class Config {
 
@@ -14,23 +15,63 @@ public class Config {
 	private static WebDriver driver;
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	
-	public void setUp() {
+	public WebDriver setUp() {
 		
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\Driver\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get(baseURL);
+		
+		return driver;
 		
 		
+	}
+	
+	public void getDriver() {
+		setUp();
 	}
 	
 	public void close() {
 		driver.close();
 	}
 	
-	public void click(By identifier) {
+	public void openUrl() {
+		driver.get(baseURL);
+	}
+	
+	public static boolean unClick(WebElement element) 
+	{
+		boolean isClicked = false;
 		
-		driver.findElement(identifier).click();
+		driver.findElement((By) element).click();
+		isClicked = true;
+		
+		return isClicked;
+		
+		
+	}
+	
+	public static boolean clickTry(WebElement element)
+	{
+		boolean isSelected = false;
+		
+		int tryNumber = 5;
+		try 
+		{
+			while(!isSelected == true && !(tryNumber == 0))
+			{
+				isSelected = unClick(element);
+				tryNumber--;					
+				System.out.println(tryNumber);
+			}
+		
+		
+		
+		
+		return isSelected;
+		}
+		
+		catch(Exception e){}
+		return isSelected;
 		
 	}
 	
@@ -57,9 +98,13 @@ public class Config {
 		}
 	}
 	
-	public static void sendKeys(By identifier, String keys) {
-		driver.findElement(identifier).sendKeys(keys);
-	}
 	
+	
+	public static void sendKeys(WebElement identifier, String keys) {
+		Actions actions=new Actions(driver);
+		actions.sendKeys(keys)
+		.build()
+		.perform();
+	}
 	
 }

@@ -1,19 +1,12 @@
 package com.amazon.elements.header;
 
-import java.awt.Dimension;
-import java.io.File;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.time.Duration;
-import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
+import java.sql.DriverAction;
+
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.amazon.test.config.Config;
 
 public class HeaderElements {
 	
@@ -21,17 +14,17 @@ public class HeaderElements {
 	@FindBy(xpath="//a[@aria-label='Amazon.com.mx']")
 	private WebElement AmazonLogo;
 	
-	@FindBy(xpath="//a[@id='nav-hamburger-menu']")
+	@FindBy(xpath="//i[@class='hm-icon nav-sprite']")
 	private WebElement Menu;
 	
 	@FindBy(xpath="//select[@aria-describedby='searchDropdownDescription']")
 	private WebElement AllDepartments;
 	
 	@FindBy(xpath="//input[@id='twotabsearchtextbox']")
-	private WebElement SearchBar;		
+	private static WebElement SearchBar;		
 	
 	@FindBy(xpath="//input[@value='Ir']")
-	private WebElement SearchButton;			
+	private static WebElement SearchButton;			
 	
 	@FindBy(xpath="//a[@data-nav-ref='nav_ya_signin']")
 	private WebElement SignInYourAccount;		
@@ -46,7 +39,7 @@ public class HeaderElements {
 	private WebElement ChooseAddress;			
 	
 	@FindBy(xpath="//a[@tabindex='47']")
-	private WebElement Promotions;				
+	private static WebElement Promotions;				
 	
 	@FindBy(xpath="//a[@tabindex='48']")
 	private WebElement Outlet;					
@@ -132,14 +125,30 @@ public class HeaderElements {
 	@FindBy(xpath="//div[@class='nav-npm-prime-logo']")
 	private WebElement AmazonPrimelogo;
 	
+
+	public static void searchProduct (String product) {
+		Config.sendKeys(SearchBar, product);
+		Config.daClick(SearchButton);
+		
+	}
+
+
+	public WebElement getPromotions() {
+		return Promotions;
+	}
+
+
+	public void setPromotions(WebElement promotions) {
+		Promotions = promotions;
+	}
 	
+	/*public static Config conf = new Config();
 	
-	
-	
-	
-	
-	
-	
-	
+	public static void main (String []args) {
+		conf.getDriver();
+		conf.openUrl();
+		conf.getDriver();
+		Promotions.click();
+	}*/
 
 }
